@@ -8,10 +8,8 @@ public class RoundButton extends JButton {
     int dim = 125;
     public RoundButton(String label) {
         super(label);
-//        Dimension size = getPreferredSize();
         Dimension size = new Dimension(dim, dim);
         size.width = size.height = Math.max(size.width,size.height);
-//        size.width = size.height = dim;
         setPreferredSize(size);
 
         setContentAreaFilled(false);
@@ -23,7 +21,6 @@ public class RoundButton extends JButton {
         } else {
             g.setColor(getBackground());
         }
-//        g.fillOval(0, 0, getSize().width-1,getSize().height-1);
         g.fillOval(0, 0, dim-1,dim-1);
 
         super.paintComponent(g);
@@ -31,7 +28,6 @@ public class RoundButton extends JButton {
 
     protected void paintBorder(Graphics g) {
         g.setColor(getForeground());
-//        g.drawOval(0, 0, getSize().width-1,     getSize().height-1);
         g.drawOval(0, 0, dim-1,dim-1);
     }
 
