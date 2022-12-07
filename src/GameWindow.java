@@ -291,11 +291,11 @@ public class GameWindow extends JFrame {
 
     }
 
-    private boolean isWhite(Color color) {
+    public static boolean isWhite(Color color) {
         return color.getRed() == 255 && color.getGreen() == 255 && color.getBlue() == 255;
     }
 
-    private boolean isBlack(Color color) {
+    public static boolean isBlack(Color color) {
         return color.getRed() == 0 && color.getGreen() == 0 && color.getBlue() == 0;
     }
 
